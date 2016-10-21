@@ -1,10 +1,10 @@
-
+---
 layout: post
 title: Bloc Jams
 thumbnail-path: "img/blocjams.png"
 short-description: Bloc Jams is a generic music streaming web application that hosts a collection of albums and a playable list of songs.
 
-
+---
 
 {:.center}
 ![]({{ site.baseurl }}/img/blocjams.png)
