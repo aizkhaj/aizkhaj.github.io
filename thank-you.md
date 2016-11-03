@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Thank You
-permalink: http://aizaz.tech/thank-you/
+permalink: /thank-you/
 feature-img: "img/color.png"
 hide: true
 ---
