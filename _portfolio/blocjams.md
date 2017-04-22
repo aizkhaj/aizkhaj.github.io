@@ -13,6 +13,8 @@ short-description: Bloc Jams is a generic music streaming web application that h
 
 Bloc Jams is a music streaming web application that demonstrates some HTML, CSS, JavaScript and jQuery skills.
 
+You can access the Github repo [here](https://github.com/aizkhaj/bloc-jams).
+
 ## Explanation
 
 Bloc Jams is a demo project I built that integrates several things: responsive design and animations for effect, a functioning collection of album pages that are rendered via JavaScript and the ability to play a sample album. Originally DOM scripting was done via vanilla JavaScript, only to be refactored into jQuery later.
@@ -22,7 +24,7 @@ Bloc Jams is a demo project I built that integrates several things: responsive d
 As this project was used solely to learn and practice my new found front end development skills, I can't say too much for a real world client problem that was solved here. But I can comment on some of the challenges faced in developing a music streaming website.
 
 * Creating mobile-friendly responsive design.
-* Dynamically presenting album informaton (songs) with functioning effects and interface buttons in one function.
+* Dynamically presenting album information (songs) with functioning effects and interface buttons in one function.
 * Implementing logic in code for what to do when a user hits next/previous on the player's interface, or by manually selecting a different song instead.
 
 ## Solution
@@ -33,7 +35,7 @@ Responsive Design:
 Presenting Song Rows, here's the code:
 {% highlight javascript %}
 var createSongRow = function(songNumber, songName, songLength) {
-    var template = 
+    var template =
      '<tr class="album-view-song-item">'
     +'  <td class="song-item-number" data-song-number="'+ songNumber +'">' + songNumber + '</td>'
     +'  <td class="song-item-title">' + songName + '</td>'
@@ -42,22 +44,22 @@ var createSongRow = function(songNumber, songName, songLength) {
     ;
 
     var $row = $(template);
-    
+
     var clickHandler = function() {
         var songNumber = parseInt($(this).attr('data-song-number'));
-        
+
         if (currentlyPlayingSongNumber !== null) {
             var currentlyPlayingCell = getSongNumberCell(songNumber);
             currentlyPlayingCell.html(currentlyPlayingSongNumber);
-        } 
-        
+        }
+
         if (currentlyPlayingSongNumber !== songNumber) {
             $(this).html(pauseButtonTemplate);
             setSong(songNumber);
             currentSoundFile.play();
             updateSeekBarWhileSongPlays();
             updatePlayerBarSong();
-            
+
             var $volumeFill = $('.volume .fill');
             var $volumeThumb = $('.volume .thumb');
             $volumeFill.width(currentVolume + '%');
@@ -75,24 +77,24 @@ var createSongRow = function(songNumber, songName, songLength) {
             }
         }
     };
-    
+
     var onHover = function(event) {
-        var songNumberCell = $(this).find('.song-item-number'); 
+        var songNumberCell = $(this).find('.song-item-number');
         var songNumber = parseInt(songNumberCell.attr('data-song-number'));
-        
+
         if (songNumber !== currentlyPlayingSongNumber) {
             songNumberCell.html(playButtonTemplate);
         }
     };
     var offHover = function(event) {
-        var songNumberCell = $(this).find('.song-item-number'); 
+        var songNumberCell = $(this).find('.song-item-number');
         var songNumber = parseInt(songNumberCell.attr('data-song-number'));
-        
+
         if (songNumber !== currentlyPlayingSongNumber) {
             songNumberCell.html(songNumber);
         }
     };
-    
+
     $row.find('.song-item-number').click(clickHandler);
     $row.hover(onHover, offHover);
     return $row;
@@ -116,28 +118,28 @@ var nextSong = function() {
     var getLastSongNumber = function(index) {
         return index == 0 ? currentAlbum.songs.length : index;
     };
-    
+
     var currentSongIndex = trackIndex(currentAlbum, currentSongFromAlbum);
     currentSongIndex++;
-    
+
     if (currentSongIndex >= currentAlbum.songs.length) {
         currentSongIndex = 0;
     }
-    
+
     //Set a new current song
     setSong(currentSongIndex + 1);
-    
+
     currentSoundFile.play();
     updateSeekBarWhileSongPlays();    
     //Update player bar info
     //You want to show new song. You will change text of a few elements
     updatePlayerBarSong();
-    
+
     var lastSongNumber = getLastSongNumber(currentSongIndex);
     //this will allow us to reset the pause or playbutton templates to the song's number. Otherwise it would just show us the pause button everytime we change the song.
     var $nextSongNumberCell = getSongNumberCell(currentlyPlayingSongNumber);
     var $lastSongNumberCell = getSongNumberCell(lastSongNumber);
-    
+
     $nextSongNumberCell.html(pauseButtonTemplate);
     $lastSongNumberCell.html(lastSongNumber);
 };
