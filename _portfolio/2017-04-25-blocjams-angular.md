@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Bloc Jams AngularJS
-thumbnail-path: "img/blocjams.png"
+thumbnail-path: "img/blocjams-ng.png"
 short-description: Bloc Jams AngularJS is a version of a generic music streaming web application that hosts a collection of albums and a playable list of songs. It's basically the same as far as the previous Bloc Jams project, but this one is built in AngularJS (v1).
 
 ---
 
 {:.center}
-![]({{ site.baseurl }}/img/blocjams.png)
+![]({{ site.baseurl }}/img/blocjams-ng.png)
 
 ## Summary
 
