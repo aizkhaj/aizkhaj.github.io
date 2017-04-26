@@ -11,7 +11,13 @@ theme_settings:
   # Header and footer text
   header_text: >
      <h1>Full Stack Developer</h1>
-     <p>My goal is to create epic stuff and solve problems.</p>
+     <p>Experienced in JavaScript (ES5, ES6), AngularJS (1 and 2), Ruby on Rails.
+     <br>
+     <small>Not to mention tools like GruntJS, Webpack and Git.
+     <br>
+     <small>Working on Node.js and ReactJS next.</small>
+     </small>
+     </p>
   header_text_feature_image:
   footer_text: >
    Powered by <a href="http://jekyllrb.com">Jekyll</a> and made with love.
@@ -27,7 +33,7 @@ theme_settings:
   github: "aizkhaj"
   google_plus:
   instagram:
-  linkedin: "https://ca.linkedin.com/in/aizaz-khaja" 
+  linkedin: "https://ca.linkedin.com/in/aizaz-khaja"
   pinterest:
   reddit:
   soundcloud:
