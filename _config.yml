@@ -10,12 +10,13 @@ theme_settings:
 
   # Header and footer text
   header_text: >
-     <h1>Full Stack Developer</h1>
-     <p>Experienced in JavaScript (ES5, ES6), AngularJS (1 and 2), Ruby on Rails.
+     <h1>Aizaz Khaja</h1>
+     <h2>Full Stack Developer</h2>
+     <p>Experienced in JavaScript (ES5, ES6), Angular (1 and 2), Ruby on Rails and Node.js.
      <br>
      <small>Not to mention tools like GruntJS, Webpack and Git.
      <br>
-     <small>Working on Node.js and ReactJS next.</small>
+     <small>Working on React.js soon.</small>
      </small>
      </p>
   header_text_feature_image:
