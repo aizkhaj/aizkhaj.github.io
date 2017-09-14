@@ -6,11 +6,10 @@ url: "http://aizaz.tech" # the base hostname & protocol for your site
 theme_settings:
   # Meta
   title: Aizaz Khaja # Your name will go here
-  description: "A personal portfolio and blog website" # used by search engines
+  description: "A full stack developer's portfolio and blog website" # used by search engines
 
   # Header and footer text
   header_text: >
-     <h1>Aizaz Khaja</h1>
      <h2>Full Stack Developer</h2>
      <p>Experienced in JavaScript (ES5, ES6), Angular (1 and 2), Ruby on Rails and Node.js.
      <br>
@@ -79,4 +78,4 @@ sass:
   sass_dir: _sass
   style: :compressed
 
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
