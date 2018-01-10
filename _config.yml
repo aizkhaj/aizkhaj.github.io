@@ -76,3 +76,5 @@ sass:
   style: :compressed
 
 plugins: [jekyll-paginate]
+
+theme: jekyll-theme-cayman
